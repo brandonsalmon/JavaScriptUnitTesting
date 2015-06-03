@@ -1,4 +1,4 @@
-# JavaScriptUnitTesting
+# JavaScript Unit Testing
 Sample code base for javascript unit testing
 
 This codebase shows how to use multiple technologies/frameworks/libraries together in order to unit test javascript code.
