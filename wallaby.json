@@ -1,0 +1,10 @@
+﻿{
+    "files": [
+        "js/lib/*min.js",
+        "js/app/*.js"
+    ],
+    "tests": [
+        "js/tests/*.spec.js"
+    ],
+    "testFramework": "jasmine@1.3.1"
+}
