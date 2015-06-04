@@ -13,6 +13,7 @@
         ],
         // list of files / patterns to load in the browser
         files: [
+            'https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js',
             'https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js',
             'js/**/*.js',
         ],

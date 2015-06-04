@@ -17,7 +17,10 @@
     self.pages = ko.computed(function () {
         var pages = [];
 
-        for (var i = 1; i <= self.pageCount() ; i++) {
+        var minPage = Math.max(1, self.page() - 2);
+        var maxPage = Math.min(self.pageCount(), self.page() + 2);
+
+        for (var i = minPage; i <= maxPage ; i++) {
             pages.push(i);
         }
 
@@ -25,21 +28,27 @@
     });
 
     self.previousPage = function () {
-        self.page(self.page() - 1);
+        self.page(Math.max(self.page() - 1, 1));
     };
     self.nextPage = function () {
-        self.page(self.page() + 1);
+        self.page(Math.min(self.page() + 1, self.pageCount()));
     };
     self.setPage = function (page) {
         self.page(page);
     };
 
     self.pageStartIndex = ko.computed(function () {
-        return pageStartIndex = (self.page() - 1) * self.pageSize();
+        return (self.page() - 1) * self.pageSize();
     });
 
     self.pageEndIndex = ko.computed(function () {
-        return pageStartIndex = self.page() * self.pageSize();
+
+        if (self.page() == self.pageCount()) {
+            return self.total();
+        }
+        else {
+            return self.page() * self.pageSize();
+        }
     });
 
     self.pageData = ko.computed(function () {

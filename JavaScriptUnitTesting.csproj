@@ -127,7 +127,9 @@
     <Content Include="js\app\Pager.js" />
     <Content Include="js\app\AppApi.js" />
     <Content Include="js\app\AppViewModel.js" />
+    <Content Include="js\lib\jquery.min.js" />
     <Content Include="js\lib\knockout-min.js" />
+    <Content Include="js\tests\AppApi.spec.js" />
     <Content Include="js\tests\Pager.spec.js" />
     <Content Include="karma.conf.js" />
     <None Include="wallaby.json" />
