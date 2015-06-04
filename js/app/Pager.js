@@ -42,13 +42,7 @@
     });
 
     self.pageEndIndex = ko.computed(function () {
-
-        if (self.page() == self.pageCount()) {
-            return self.total();
-        }
-        else {
-            return self.page() * self.pageSize();
-        }
+        return Math.min(self.page() * self.pageSize(), self.total());
     });
 
     self.pageData = ko.computed(function () {
