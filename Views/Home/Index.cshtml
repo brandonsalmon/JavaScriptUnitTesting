@@ -1,42 +1,8 @@
 ﻿@section scripts
 {
-    <script src="~/js/app/AppViewModel.js"></script>
-    <script src="~/js/app/AppApi.js"></script>
-    <script src="~/js/app/Pager.js"></script>
-
-    <script type="text/javascript">
-        var viewModel = new AppViewModel();
-        ko.applyBindings(viewModel);
-        viewModel.loadData();
-    </script>
+    <script src="~/js/app/app.js"></script>
+    <script src="~/js/app/HomeController.js"></script>
 }
-<h2>JavaScript Unit Testing</h2>
-<div id="example-paged-data" data-bind="with: pager()">
-    <div class="text-right" data-bind="text: pageMessage()"></div>
-    <div data-bind="foreach: pageData()">
-        <div>
-            <span data-bind="text: Id"></span>:
-            <span data-bind="text: Name"></span>
-        </div>
-    </div>
-
-    <nav>
-        <ul class="pagination">
-            <li data-bind="click: previousPage">
-                <a href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <!-- ko foreach: pages() -->
-            <li data-bind="click: $parent.setPage">
-                <a href="#" data-bind="text: $data"></a>
-            </li>
-            <!-- /ko -->
-            <li data-bind="click: nextPage">
-                <a href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+<div ng-app="cap" ng-controller="HomeController" ng-init="getData()">
+    <div ng-repeat="person in people">{{person}}</div>
 </div>

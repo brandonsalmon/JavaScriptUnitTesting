@@ -123,16 +123,11 @@
     <Content Include="css\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="gruntfile.js" />
-    <Content Include="js\app\Pager.js" />
-    <Content Include="js\app\AppApi.js" />
-    <Content Include="js\app\AppViewModel.js" />
+    <Content Include="js\app\HomeController.js" />
+    <Content Include="js\app\app.js" />
+    <Content Include="js\lib\angular.js" />
+    <Content Include="js\lib\angular.min.js" />
     <Content Include="js\lib\jquery.min.js" />
-    <Content Include="js\lib\knockout-min.js" />
-    <Content Include="js\tests\AppApi.spec.js" />
-    <Content Include="js\tests\Pager.spec.js" />
-    <Content Include="karma.conf.js" />
-    <None Include="wallaby.json" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -150,9 +145,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="package.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Layout.cshtml" />

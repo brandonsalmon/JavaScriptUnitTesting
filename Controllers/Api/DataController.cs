@@ -13,7 +13,7 @@ namespace JavaScriptUnitTesting.Controllers.Api
 
         public IEnumerable<Person> Get()
         {
-            return GetRandomPeople(100);
+            return GetRandomPeople(1110);
         }
 
         private IEnumerable<Person> GetRandomPeople(int numberOfRecords)
