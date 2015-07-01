@@ -125,7 +125,8 @@
     <Content Include="Global.asax" />
     <Content Include="js\app\HomeController.js" />
     <Content Include="js\app\app.js" />
-    <Content Include="js\lib\angular.js" />
+    <Content Include="js\app\Pager.html" />
+    <Content Include="js\app\Pager.js" />
     <Content Include="js\lib\angular.min.js" />
     <Content Include="js\lib\jquery.min.js" />
     <Content Include="Web.config" />
