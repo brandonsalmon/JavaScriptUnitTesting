@@ -1,14 +1,18 @@
 ﻿<nav>
+    <div>Page size: {{capPagerPageSize}}</div>
+    <div>Page: {{pageNumber()}}</div>
     <ul class="pagination">
-        <li class="previous-page">
+        <li class="previous-page" ng-click="previousPage()">
             <a href="#" aria-label="Previous">
                 <span aria-hidden="true">&laquo;</span>
             </a>
         </li>
-        <li class="select-page">
-            <a href="#"></a>
+        <li ng-repeat="page in pages()"
+            ng-click="goToPage(page)"
+            class="select-page">
+            <a href="#">{{page}}</a>
         </li>
-        <li class="next-page">
+        <li class="next-page" ng-click="nextPage()">
             <a href="#" aria-label="Next">
                 <span aria-hidden="true">&raquo;</span>
             </a>

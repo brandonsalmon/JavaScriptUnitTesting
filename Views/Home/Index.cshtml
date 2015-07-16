@@ -2,7 +2,30 @@
 {
     <script src="~/js/app/app.js"></script>
     <script src="~/js/app/HomeController.js"></script>
+    <script src="~/js/app/Pager.js"></script>
 }
-<div ng-app="cap" ng-controller="HomeController" ng-init="getData()">
-    <div ng-repeat="person in people">{{person}}</div>
+<div ng-app="cap"
+     ng-controller="HomeController"
+     ng-init="getData()">
+    <div>
+        Filter: <input ng-model="filterText"/>
+        <select ng-model="sortProperty" ng-init="sortProperty = 'Id'">
+            <option value="Id">ID</option>
+            <option value="-Id">ID (desc)</option>
+            <option value="Name">Name</option>
+            <option value="-Name">Name (desc)</option>
+            <option value="Salary">Salary</option>
+            <option value="-Salary">Salary (desc)</option>
+        </select>
+    </div>
+    <div ng-repeat="person in filteredPeople() | filter:filterText | orderBy:sortProperty | limitTo:pageSize:startFrom">
+        {{person.Id}}: {{person.Name}}
+        <span class="pull-right">
+            {{person.Salary | currency:'$':2}}
+        </span>
+    </div>
+    <cap-pager cap-pager-items="filteredPeople()"
+               cap-pager-page-size="pageSize"
+               cap-pager-start-from="startFrom">
+    </cap-pager>
 </div>

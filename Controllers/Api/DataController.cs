@@ -38,7 +38,8 @@ namespace JavaScriptUnitTesting.Controllers.Api
             return new Person
             {
                 Id = id,
-                Name = GetRandomName()
+                Name = GetRandomName(),
+                Salary = ((decimal)random.NextDouble() * 50000) + 50000
             };
         }
 
